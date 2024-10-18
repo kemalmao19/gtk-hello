@@ -2,7 +2,7 @@ public class MyApp : Gtk.Application {
     public MyApp () {
         Object (
             application_id: "com.github.kemalmao.gtk-hello",
-            flags: ApplicationFlags.FLAGS_NONE
+            flags: ApplicationFlags.DEFAULT_FLAGS
         );
     }
 
