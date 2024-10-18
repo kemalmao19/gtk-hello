@@ -11,12 +11,8 @@
       let pkgs = nixpkgs.legacyPackages.${system};
       in with pkgs; {
         devShells.default = mkShell {
-          buildInputs = [
-            vala
-            vala-lint
-            vimPlugins.nvim-treesitter-parsers.vala
-            vala-language-server
-          ];
+          buildInputs =
+            [ vala vala-lint vala-language-server pkg-config glib gtk4 ];
         };
       });
 }
